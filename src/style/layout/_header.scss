@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+#header {}
+.header-area {position: relative;height: $header-height;}
+.header-logo {position: absolute;top: 50%;left: 0;transform: translate(0, -50%);}
+.header-logo h1 {color: $grey900;font-size: 50px;font-weight: 900;}
+.header-logo h1 em {color: $primary;font-size: 70px;line-height: 50px;animation: header-logo-ani 4s infinite;}
+@keyframes header-logo-ani {
+  0% {opacity: 0;}
+  50% {opacity: 1;}
+  100% {opacity: 0;}
+}

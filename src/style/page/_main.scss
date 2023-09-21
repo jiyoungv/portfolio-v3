@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/* common */
+.main-section:not(:last-child) {margin-bottom: 50px;}
+
+/* profile */
+.main-profile-area {padding: 20px;background: $primary100;}
+
+/* career */
+.main-career-area {position: relative;}
+.main-career-head {display: flex;align-items: center;gap: 5px;position: sticky;top: 0;left: 0;background: $bg-beige;}
+.main-career-head li {@include font-small;width: 50%;padding: 5px 0;border-bottom: 1px solid $grey300;color: $grey500;text-align: center;}
+.main-career-body {position: relative;}
+.main-career-list {display: flex;align-items: flex-start;gap: 5px;padding: 10px 0;}
+.main-career-list-left {width: 45%;}
+.main-career-list-right {width: 55%;}
+.main-career-company-list {display: flex;align-items: flex-start;gap: 2px;}
+.main-career-company-list > li {}
+.main-career-company-list .list-col1 {width: 15%;}
+.main-career-company-list .list-col2 {width: 15%;}
+.main-career-company-list .list-col3 {width: 70%;}
+.main-career-company-logo {width: 100%;aspect-ratio: 1 / 1;}
+.main-career-company-logo img {width: 100%;height: 100%;object-fit: cover;}
+.main-career-company-name {}
+.main-career-company-name a {text-decoration: underline;}
+.main-career-project-list {display: flex;align-items: flex-start;gap: 2px;}
+.main-career-project-list > li {}
+.main-career-project-list .list-col1 {width: 30%;}
+.main-career-project-list .list-col2 {width: 10%;}
+.main-career-project-list .list-col3 {width: 15%;}
+.main-career-project-list .list-col4 {width: 40%;}
+.main-career-desc-list {}
+.main-career-desc-list > li {position: relative;padding-left: calc(4px + 6px);color: $grey700;}
+.main-career-desc-list > li:not(:last-child) {margin-bottom: 5px;}
+.main-career-desc-list > li::before {content: '';display: inline-block;position: absolute;left: 0;top: calc($font-base * $line-height2 / 2);transform: translate(0, -50%);width: 4px;height: 4px;border-radius: 50%;background: currentColor;}
+.main-career-device-list {display: flex;align-items: center;gap: 2px;}
+.main-career-device-list > li {@include font-small;padding: 2px 6px;border-radius: $radius1;background: $primary100;color: $primary;}
+.main-career-device-list > li.type2 {}
+.main-career-device-list > li.type3 {}
+.main-career-link-list {}
+.main-career-link-list > li {}
+.main-career-link-list > li > a {text-decoration: underline;}
