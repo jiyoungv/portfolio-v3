@@ -8,35 +8,53 @@
 
 /* career */
 .main-career-area {position: relative;}
-.main-career-head {display: flex;align-items: center;gap: 5px;position: sticky;top: 0;left: 0;background: $bg-beige;}
-.main-career-head li {@include font-small;width: 50%;padding: 5px 0;border-bottom: 1px solid $grey300;color: $grey500;text-align: center;}
+
+.main-career .row {display: flex;align-items: flex-start;gap: 10px;}
+.main-career [class*="col-"] {padding: 0 5px;}
+.main-career .col-left {width: 50%;}
+.main-career .col-left1 {width: 20%;}
+.main-career .col-left2 {width: 15%;}
+.main-career .col-left3 {width: 65%;}
+.main-career .col-right {width: 50%;}
+.main-career .col-right1 {width: 30%}
+.main-career .col-right2 {width: 15%;}
+.main-career .col-right3 {width: 55%;}
+
+.main-career-head {z-index: 10;position: sticky;top: 0;left: 0;background: $bg-beige;}
+.main-career-head .head-list li {@include font-small;padding: 5px 0;color: $grey500;text-align: center;}
+.main-career-head .head-list.type2 li {border-bottom: 1px solid $grey300;}
+
 .main-career-body {position: relative;}
-.main-career-list {display: flex;align-items: flex-start;gap: 5px;padding: 10px 0;}
-.main-career-list-left {width: 45%;}
-.main-career-list-right {width: 55%;}
-.main-career-company-list {display: flex;align-items: flex-start;gap: 2px;}
+.main-career-body .body-list {padding: 12px 0;}
+
+.main-career-company-list {}
 .main-career-company-list > li {}
-.main-career-company-list .list-col1 {width: 15%;}
-.main-career-company-list .list-col2 {width: 15%;}
-.main-career-company-list .list-col3 {width: 70%;}
-.main-career-company-logo {width: 100%;aspect-ratio: 1 / 1;}
+
+.main-career-company-logo {width: 100%;aspect-ratio: 1 / 1;margin-bottom: 5px;}
 .main-career-company-logo img {width: 100%;height: 100%;object-fit: cover;}
-.main-career-company-name {}
-.main-career-company-name a {text-decoration: underline;}
-.main-career-project-list {display: flex;align-items: flex-start;gap: 2px;}
-.main-career-project-list > li {}
-.main-career-project-list .list-col1 {width: 30%;}
-.main-career-project-list .list-col2 {width: 10%;}
-.main-career-project-list .list-col3 {width: 15%;}
-.main-career-project-list .list-col4 {width: 40%;}
+
+.main-career-company-name {@include font-mid;color: $grey900;font-weight: $font-bold;text-align: center;}
+
+.main-career-period {color: $grey;}
+.main-career-period small {@include font-small;}
+
 .main-career-desc-list {}
-.main-career-desc-list > li {position: relative;padding-left: calc(4px + 6px);color: $grey700;}
+.main-career-desc-list > li {position: relative;padding-left: calc(4px + 6px);color: $grey500;}
 .main-career-desc-list > li:not(:last-child) {margin-bottom: 5px;}
 .main-career-desc-list > li::before {content: '';display: inline-block;position: absolute;left: 0;top: calc($font-base * $line-height2 / 2);transform: translate(0, -50%);width: 4px;height: 4px;border-radius: 50%;background: currentColor;}
-.main-career-device-list {display: flex;align-items: center;gap: 2px;}
-.main-career-device-list > li {@include font-small;padding: 2px 6px;border-radius: $radius1;background: $primary100;color: $primary;}
-.main-career-device-list > li.type2 {}
-.main-career-device-list > li.type3 {}
-.main-career-link-list {}
+
+.main-career-project-name {@include font-mid;color: $grey900;font-weight: $font-bold;}
+
+.main-career-device-list {display: flex;align-items: center;gap: 4px;margin-bottom: 5px;}
+.main-career-device-list > li {@include font-small;padding: 0 6px;border: 1px solid $success300;border-radius: $radius1;background: $success100;color: $success600;}
+.main-career-device-list > li.type2 {border: 1px solid $info300;background: $info100;color: $info600;}
+.main-career-device-list > li.type3 {border: 1px solid $warning300;background: $warning100;color: $warning600;}
+
+.main-career-project-list {}
+.main-career-project-list > li {}
+
+.main-career-link-list {display: flex;align-items: center;gap: 4px;margin-top: 10px;}
 .main-career-link-list > li {}
-.main-career-link-list > li > a {text-decoration: underline;}
+.main-career-link-list > li a {display: block;color: $grey;font-size: $font-large;transition-property: opacity;transition-duration: $transition-speed;}
+.main-career-link-list > li a:hover {opacity: 0.6;}
+.main-career-link-list > li svg {display: block;}

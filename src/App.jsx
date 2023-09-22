@@ -1,3 +1,4 @@
+import { RiLink, RiFlaskFill, RiGithubFill } from 'react-icons/ri';
 import AppLayout from 'component/AppLayout';
 import temp_img from 'asset/image/temp_img.png';
 
@@ -26,69 +27,84 @@ const App = () => {
       <section className="main-section main-career">
         <div className="common-inner">
           <div className="main-career-area">
-            <ul className="main-career-head">
-              <li>company</li>
-              <li>project</li>
-            </ul>
+            <div className="main-career-head">
+              <ul className="row head-list">
+                <li className="col-left">company</li>
+                <li className="col-right">project</li>
+              </ul>
+              <ul className="row head-list type2">
+                <li className="col-left1">name</li>
+                <li className="col-left2">period</li>
+                <li className="col-left3">description</li>
+                <li className="col-right1">device | name | link</li>
+                <li className="col-right2">period</li>
+                <li className="col-right3">description</li>
+              </ul>
+            </div>
             <div className="main-career-body">
-              <div className="main-career-list">
-                <div className="main-career-list-left">
-                  <ul className="main-career-company-list">
-                    <li className="list-col1">
-                      <figure className="main-career-company-logo">
-                        <img src={temp_img} alt="회사" />
-                      </figure>
-                      <p className="main-career-company-name"><a href="https://naver.com" target="_blank" rel="noreferrer">VAIV Company(icon)</a></p>
-                    </li>
-                    <li className="list-col2">
-                      2021.03 ~ <br/>
-                      (2년 7개월)
-                    </li>
-                    <li className="list-col3">
-                      <ul className="main-career-desc-list">
-                        <li>23.03 책임 진급</li>
-                        <li>22.07 ~ AI사업부문 신기술사업팀 소속</li>
-                        <li>22.12 ~ AI사업부문 신기술사업팀 전사지원셀장</li>
-                        <li>22.12 ~ 23.06 AI사업부문 기술전략팀(이전 명칭) BX그룹장</li>
-                        <li>21.03 ~ 22.06 썸트렌드부문 UIUX팀 소속</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-                <div className="main-career-list-right">
-                  <ul className="main-career-project-list">
-                    <li className="list-col1">
-                      VAIV Bio-discovery 신규 구축
-                      <ul className="main-career-device-list">
-                        <li>PC</li>
-                        <li className="type2">MO</li>
-                        <li className="type3">Responsive</li>
-                      </ul>
-                    </li>
-                    <li className="list-col2">
-                      <ul className="main-career-link-list">
-                        <li>
-                          <a href="https://naver.com" target="_blank" rel="noreferrer">Prod(icon)</a>
-                        </li>
-                        <li>
-                          <a href="https://naver.com" target="_blank" rel="noreferrer">Test(icon)</a>
-                        </li>
-                        <li>
-                          <a href="https://naver.com" target="_blank" rel="noreferrer">GIT(icon)</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="list-col3">
-                      2023.09 ~ <br/>
-                      2023.09
-                    </li>
-                    <li className="list-col4">
-                      <ul className="main-career-desc-list">
-                        <li>디자인, 퍼블리싱 100% 참여</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
+              <div className="row body-list">
+                <ul className="row col-left main-career-company-list">
+                  <li className="col-left1">
+                    <figure className="main-career-company-logo">
+                      <img src={temp_img} alt="회사" />
+                    </figure>
+                    <p className="main-career-company-name">VAIV Company</p>
+                  </li>
+                  <li className="col-left2">
+                    <p className="main-career-period">
+                      2021.03~ <br/>
+                      <small>(2년 7개월)</small>
+                    </p>
+                  </li>
+                  <li className="col-left3">
+                    <ul className="main-career-desc-list">
+                      <li>23.03 책임 진급</li>
+                      <li>22.07~ AI사업부문 신기술사업팀 소속</li>
+                      <li>22.12~ AI사업부문 신기술사업팀 전사지원셀장</li>
+                      <li>22.12~23.06 AI사업부문 기술전략팀(이전 명칭) BX그룹장</li>
+                      <li>21.03~22.06 썸트렌드부문 UIUX팀 소속</li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul className="row col-right main-career-project-list">
+                  <li className="col-right1">
+                    <ul className="main-career-device-list">
+                      <li>PC</li>
+                      <li className="type2">MO</li>
+                      <li className="type3">Responsive</li>
+                    </ul>
+                    <p className="main-career-project-name">VAIV Bio-discovery 신규 구축</p>
+                    <ul className="main-career-link-list">
+                      <li>
+                        <a href="https://naver.com" target="_blank" title="Product Server" rel="noreferrer">
+                          <RiLink />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://naver.com" target="_blank" title="Test Page" rel="noreferrer">
+                          <RiFlaskFill />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://naver.com" target="_blank" title="Github Page" rel="noreferrer">
+                          <RiGithubFill />
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="col-right2">
+                    <p className="main-career-period">
+                      2021.03~ <br/>
+                      2021.03
+                      <small>(2년 7개월)</small>
+                    </p>
+                  </li>
+                  <li className="col-right3">
+                    <ul className="main-career-desc-list">
+                      <li>디자인, 퍼블리싱 100% 참여</li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
