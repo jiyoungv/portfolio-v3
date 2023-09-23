@@ -18,5 +18,16 @@
 .main-profile-name {}
 .main-profile-name h6 {@include h6;}
 
+.main-profile-info dl {display: flex;align-items: center;}
+.main-profile-info dl:not(:last-child) {margin-bottom: 4px;}
+.main-profile-info dt {width: 100px;font-weight: $font-bold;text-transform: uppercase;}
+.main-profile-info dd a:hover {text-decoration: underline;}
+
+.main-career-collect {}
+
+.main-career-head {position: sticky;top: 0;left: 0;background: $white;}
+
+.main-career-title {padding: 10px 0;text-align: center;}
+
 .main-foot {padding: 10px 0;text-align: center;}
 .main-foot p {@include font-small;}
