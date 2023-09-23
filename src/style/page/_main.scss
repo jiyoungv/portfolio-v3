@@ -3,6 +3,10 @@
 .main-table {}
 .main-table .table-row {display: flex;align-items: stretch;border: 1px solid $black;border-bottom: 0;}
 .main-table .table-row:last-child {border-bottom: 1px solid $black;}
+.main-table .table-row.height-full {height: 100%;}
+.main-table .table-row.depth2 {border-left: 0;border-right: 0;}
+.main-table .table-row.depth2:first-child {border-top: 0;}
+.main-table .table-row.depth2:last-child {border-bottom: 0;}
 .main-table .table-col {width: 100%;}
 .main-table [class^="table-col"]:not(:last-child) {border-right: 1px solid $black;}
 @for $i from 1 to 24 {
@@ -25,9 +29,17 @@
 
 .main-career-collect {}
 
-.main-career-head {position: sticky;top: 0;left: 0;background: $white;}
+.main-career-head {z-index: 10;position: sticky;top: 0;left: 0;background: $white;}
+
+.main-career-body {margin-top: -1px;}
+.main-career-body .table-row:last-child {border-bottom: 0;}
+.main-career-body-left {position: sticky;top: 86.2px;left: 0;}
 
 .main-career-title {padding: 10px 0;text-align: center;}
+
+.main-career-company-name {}
+
+.main-career-period {}
 
 .main-foot {padding: 10px 0;text-align: center;}
 .main-foot p {@include font-small;}

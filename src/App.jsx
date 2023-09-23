@@ -1,14 +1,15 @@
 // import { RiLink, RiFlaskFill, RiGithubFill } from 'react-icons/ri';
 import parse from 'html-react-parser';
 import AppLayout from 'component/AppLayout';
+import MainCareerTable from 'component/MainCareerTable';
 import { profileInfoList } from 'util/data';
 // import temp_img from 'asset/image/temp_img.png';
 
 const App = () => {
   return (
     <AppLayout>
-      <div className="common-inner">
-        <section className="main-table">
+      <section className="main-table">
+        <div className="common-inner">
           <div className="table-row">
             <div className="table-col">
               <article className="main-head">
@@ -47,66 +48,7 @@ const App = () => {
               </article>
             </div>
           </div>
-          <div className="main-career-head">
-            <div className="table-row">
-              <div className="table-col">
-                <article className="main-career-title">
-                  <h6>career</h6>
-                </article>
-              </div>
-            </div>
-            <div className="table-row">
-              <div className="table-col-12">
-                <article className="main-career-head-col">
-                  <p>company</p>
-                </article>
-              </div>
-              <div className="table-col-12">
-                <article className="main-career-head-col">
-                  <p>project</p>
-                </article>
-              </div>
-            </div>
-            <div className="table-row">
-              <div className="table-col-4">
-                <article className="main-career-head-col">
-                  <p>name</p>
-                </article>
-              </div>
-              <div className="table-col-4">
-                <article className="main-career-head-col">
-                  <p>period</p>
-                </article>
-              </div>
-              <div className="table-col-4">
-                <article className="main-career-head-col">
-                  <p>description</p>
-                </article>
-              </div>
-              <div className="table-col-4">
-                <article className="main-career-head-col">
-                  <p>device / name / link</p>
-                </article>
-              </div>
-              <div className="table-col-4">
-                <article className="main-career-head-col">
-                  <p>period</p>
-                </article>
-              </div>
-              <div className="table-col-4">
-                <article className="main-career-head-col">
-                  <p>description</p>
-                </article>
-              </div>
-            </div>
-          </div>
-          <div className="table-row">
-            <div className="table-col">
-              <article style={{ height: 800 }}>
-                내용
-              </article>
-            </div>
-          </div>
+          <MainCareerTable />
           <div className="table-row">
             <div className="table-col">
               <article>
@@ -121,8 +63,8 @@ const App = () => {
               </article>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </AppLayout>
   );
 };
