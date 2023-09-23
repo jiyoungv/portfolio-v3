@@ -12,50 +12,6 @@ $primary800: #1D3C69 !default;
 $primary900: #112A57 !default;
 $primary: $primary500 !default;
 
-$success100: #EDFCD4 !default;
-$success200: #D7F9AA !default;
-$success300: #B7EE7D !default;
-$success400: #96DE5A !default;
-$success500: #69C92A !default;
-$success600: #4EAC1E !default;
-$success700: #379015 !default;
-$success800: #23740D !default;
-$success900: #166008 !default;
-$success: $success500 !default;
-
-$info100: #E2EAFE !default;
-$info200: #C7D4FE !default;
-$info300: #AABCFC !default;
-$info400: #94A9FA !default;
-$info500: #718AF7 !default;
-$info600: #5268D4 !default;
-$info700: #384AB1 !default;
-$info800: #24318F !default;
-$info900: #152076 !default;
-$info: $info500 !default;
-
-$warning100: #FEF6D3 !default;
-$warning200: #FEEBA8 !default;
-$warning300: #FCDC7C !default;
-$warning400: #FACD5C !default;
-$warning500: #F7B527 !default;
-$warning600: #D4941C !default;
-$warning700: #B17513 !default;
-$warning800: #8F580C !default;
-$warning900: #764407 !default;
-$warning: $warning500 !default;
-
-$danger100: #FFE3D9 !default;
-$danger200: #FFC1B4 !default;
-$danger300: #FF978E !default;
-$danger400: #FF7274 !default;
-$danger500: #FF4457 !default;
-$danger600: #DB3152 !default;
-$danger700: #B7224C !default;
-$danger800: #931545 !default;
-$danger900: #7A0D40 !default;
-$danger: $danger500 !default;
-
 $grey100: #F9FAFB !default;
 $grey200: #F4F6F8 !default;
 $grey300: #DFE3E8 !default;
@@ -67,10 +23,8 @@ $grey800: #212B36 !default;
 $grey900: #161C24 !default;
 $grey: $grey700 !default;
 
-$black: #000 !default;
+$black: #333 !default;
 $white: #fff !default;
-
-$bg-beige: #fbf9f5 !default;
 
 /* font */
 $font-system: -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !default;
@@ -91,6 +45,7 @@ $font-small: 12px !default;
 $font-regular: 400 !default;
 $font-medium: 500 !default;
 $font-bold: 700 !default;
+$font-black: 900 !default;
 
 $line-height1: 1.4 !default;
 $line-height2: 1.5 !default;
@@ -103,13 +58,11 @@ $zindex3: 7777777 !default; // 그 외
 /* radius */
 $radius1: 8px !default;
 $radius2: 10px !default;
-$radius3: 12px !default;
 
 /* layout */
 $inner-width: 1300px !default;
 $inner-gutter: 20px !default;
 $header-height: 200px !default;
-$footer-height: 60px !default;
 
 /* speed */
 $transition-speed: 0.2s !default;
