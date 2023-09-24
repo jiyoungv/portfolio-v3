@@ -1,35 +1,28 @@
 import parse from 'html-react-parser';
 import { RiLink, RiFlaskFill, RiGithubFill } from 'react-icons/ri';
 import { careerList } from 'util/data';
-import { changeDateNotation } from 'util/func';
+import { changeDateNotation, getYearMonthDiff, getYearMonthDiffStr } from 'util/func';
 
 const MainCareerTable = () => {
   return (
     <>
       <div className="main-career-head">
         <div className="table-row">
-          <div className="table-col">
-            <article className="main-career-title">
+          <div className="table-col-12">
+            <article className="main-career-head-col">
               <p>career</p>
             </article>
           </div>
-        </div>
-        <div className="table-row">
           <div className="table-col-12">
             <article className="main-career-head-col">
-              <p>company</p>
-            </article>
-          </div>
-          <div className="table-col-12">
-            <article className="main-career-head-col">
-              <p>project</p>
+              <p>project · work</p>
             </article>
           </div>
         </div>
         <div className="table-row">
           <div className="table-col-4">
             <article className="main-career-head-col">
-              <p>name</p>
+              <p>information</p>
             </article>
           </div>
           <div className="table-col-2">
@@ -44,7 +37,7 @@ const MainCareerTable = () => {
           </div>
           <div className="table-col-4">
             <article className="main-career-head-col">
-              <p>device / name / link</p>
+              <p>information</p>
             </article>
           </div>
           <div className="table-col-2">
@@ -76,14 +69,18 @@ const MainCareerTable = () => {
                 </div>
                 <div className="table-col-4">
                   <article className="main-career-body-left main-career-period">
-                    <p>{changeDateNotation(v.startDate, '.')} ~ <br/>{changeDateNotation(v.endDate, '.')} <small>(약 2년 7개월)</small></p>
+                    <p>
+                      {changeDateNotation(v.startDate, '.')}~<br/>
+                      {changeDateNotation(v.endDate, '.')}
+                      <small>(약 {getYearMonthDiffStr(getYearMonthDiff(v.startDate, v.endDate))})</small>
+                    </p>
                   </article>
                 </div>
                 <div className="table-col-12">
                   <article className="main-career-body-left">
-                    {v.description && (
-                      <ul>
-                        {v.description.map((v2, i2) => (
+                    {v.descriptions && (
+                      <ul className="main-career-desc-list">
+                        {v.descriptions.map((v2, i2) => (
                           <li key={i2}>{v2}</li>
                         ))}
                       </ul>
@@ -93,13 +90,13 @@ const MainCareerTable = () => {
               </div>
             </div>
             <div className="table-col-12">
-              {v.project.map((v2, i2) => (
+              {v.projects.map((v2, i2) => (
                 <div key={i2} className="table-row depth2">
                   <div className="table-col-8">
-                    <article className="main-career-project-info">
-                      {v2.device && (
+                    <article className="main-career-projects-info">
+                      {v2.devices && (
                         <ul className="main-career-device-list">
-                          {v2.device.map((v3, i3) => (
+                          {v2.devices.map((v3, i3) => (
                             <li key={i3}>{v3}</li>
                           ))}
                         </ul>
@@ -130,18 +127,29 @@ const MainCareerTable = () => {
                           )}
                         </ul>
                       )}
+                      {v2.skills && (
+                        <ul className="main-career-skill-list">
+                          {v2.skills.map((v3, i3) => (
+                            <li key={i3}>{v3}</li>
+                          ))}
+                        </ul>
+                      )}
                     </article>
                   </div>
                   <div className="table-col-4">
                     <article className="main-career-period">
-                      <p>{changeDateNotation(v2.startDate, '.')} ~ <br/>{changeDateNotation(v2.endDate, '.')} <small>(약 2년 7개월)</small></p>
+                      <p>
+                        {changeDateNotation(v2.startDate, '.')}~<br/>
+                        {changeDateNotation(v2.endDate, '.')} 
+                        <small>(약 {getYearMonthDiffStr(getYearMonthDiff(v2.startDate, v2.endDate))})</small>
+                      </p>
                     </article>
                   </div>
                   <div className="table-col-12">
                     <article>
-                      {v2.description && (
-                        <ul>
-                          {v2.description.map((v3, i3) => (
+                      {v2.descriptions && (
+                        <ul className="main-career-desc-list">
+                          {v2.descriptions.map((v3, i3) => (
                             <li key={i3}>{v3}</li>
                           ))}
                         </ul>

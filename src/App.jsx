@@ -25,7 +25,11 @@ const App = () => {
               </div>
               <div className="table-col-4">
                 <article className="main-profile-name">
-                  <h1>Ji Young <br/>Park</h1>
+                  <h1>
+                    박지영. <br/>
+                    Ji Young <br/>
+                    Park.
+                  </h1>
                 </article>
               </div>
               <div className="table-col-16">
@@ -49,13 +53,6 @@ const App = () => {
               </div>
             </div>
             <MainCareerTable />
-            <div className="table-row">
-              <div className="table-col">
-                <article>
-                  d
-                </article>
-              </div>
-            </div>
             <div className="table-row">
               <div className="table-col">
                 <article className="main-foot">

@@ -7,7 +7,11 @@
 .main-table .table-row.depth2:first-child {border-top: 0;}
 .main-table .table-row.depth2:last-child {border-bottom: 0;}
 .main-table .table-col {width: 100%;}
-.main-table [class^="table-col"] {flex: 0 0 auto;}
+.main-table [class^="table-col"] {flex: 0 0 auto;position: relative;}
+.main-table [class^="table-col"]::after {content: '';display: block;position: absolute;top: 0;right: 0;width: 100%;height: 100%;background: $primary100;animation: main-table-col-ani 2s 0.7s ease-in-out forwards;}
+@keyframes main-table-col-ani {
+  100% {width: 0%;}
+}
 .main-table [class^="table-col"]:not(:last-child) {border-right: 1px solid $main-table-border-color;}
 .main-table [class^="table-col"] article {width: 100%;height: 100%;}
 @for $i from 1 to 24 {
@@ -18,7 +22,7 @@
 .main-head p {@include font-small;color: $main-table-text-color1;font-weight: $font-bold;letter-spacing: 10px;text-transform: uppercase;}
 
 .main-logo {display: flex;justify-content: center;align-items: center;}
-.main-logo h1 {color: $main-table-text-color2;font-size: 77px;font-weight: $font-black;animation: main-logo-ani 10s infinite;}
+.main-logo h1 {color: $primary;font-size: 77px;font-weight: $font-black;animation: main-logo-ani 10s infinite;}
 @keyframes main-logo-ani {
   0% {color: $primary;}
   10% {color: orangered;}
@@ -29,55 +33,57 @@
   60% {color: IndianRed;}
   70% {color: Gold;}
   80% {color: RoyalBlue;}
-  90% {color: BurlyWood;}
-  100% {color: DarkSeaGreen;}
+  90% {color: DarkSeaGreen;}
+  100% {color: $primary;}
 }
 
 .main-profile-name {display: flex;justify-content: center;align-items: center;text-align: center;}
-.main-profile-name h1 {@include h1;color: $main-table-text-color2;font-weight: $font-black;}
+.main-profile-name h1 {@include h1;color: $primary;font-weight: $font-black;}
 
 .main-profile-info {padding: $main-table-gutter calc($main-table-gutter * 2);}
 .main-profile-info dl {display: flex;align-items: center;}
 .main-profile-info dl:not(:last-child) {margin-bottom: 4px;}
 .main-profile-info dt {width: 100px;font-weight: $font-bold;text-transform: uppercase;}
-.main-profile-info dd {color: $main-table-text-color2;}
+.main-profile-info dd {color: $primary;}
 .main-profile-info dd a {text-decoration: underline;}
 .main-profile-info dd a:hover {text-decoration: none;}
 
 .main-career-collect {}
 
 .main-career-head {z-index: 10;position: sticky;top: 0;left: 0;background: $white;}
-.main-career-head-col {padding: $main-table-gutter;}
+.main-career-head-col {padding: $main-table-gutter;text-align: center;}
 .main-career-head-col p {@include font-small;color: $main-table-text-color1;font-weight: $font-bold;text-transform: uppercase;}
 
 .main-career-body {margin-top: -1px;}
 .main-career-body .table-row:last-child {border-bottom: 0;}
-.main-career-body .table-row article {padding: $main-table-gutter;color: $main-table-text-color2;}
-.main-career-body-left {position: sticky;top: 86.2px;left: 0;}
-
-.main-career-title {padding: $main-table-gutter 0;text-align: center;}
-.main-career-title p {@include font-small;color: $main-table-text-color1;font-weight: $font-bold;letter-spacing: 10px;text-transform: uppercase;}
-
-.main-career-company-info {}
+.main-career-body .table-row article {padding: $main-table-gutter;color: $primary;}
+.main-career-body-left {position: sticky;top: 78.4px;left: 0;height: auto !important;}
 
 .main-career-name {@include font-mid;font-weight: $font-bold;}
 
-.main-career-company-link {display: block;margin-top: 5px;font-size: $font-mid;line-height: 1;}
+.main-career-period p small {@include font-small;display: block;}
+
+.main-career-desc-list li {position: relative;padding-left: calc(4px + 5px);}
+.main-career-desc-list li::before {content: '';display: inline-block;position: absolute;left: 0;top: calc($font-base * $line-height2 / 2);transform: translate(0, -50%);width: 4px;height: 4px;border-radius: 50%;background: $primary;}
+
+.main-career-company-info {}
+
+.main-career-company-link {display: inline- block;margin-top: 5px;font-size: $font-mid;line-height: 1;}
 .main-career-company-link:hover {opacity: 0.5;}
 .main-career-company-link svg {display: block;}
 
-.main-career-period {}
-.main-career-period p {}
-.main-career-period p small {@include font-small;display: block;}
-
-.main-career-device-list {display: flex;align-items: center;gap: 4px;margin-bottom: 5px;}
-.main-career-device-list li {@include font-small;padding: 0 6px;border-radius: $radius1;background: $main-table-text-color2;color: $white;}
+.main-career-device-list {display: flex;align-items: center;}
+.main-career-device-list li {@include font-small;}
+.main-career-device-list li:not(:last-child)::after {content: '';display: inline-block;vertical-align: middle;width: 2px;height: 2px;margin: 0 4px;border-radius: 50%;background: $primary;}
 
 .main-career-link-list {display: flex;align-items: center;gap: 4px;margin-top: 5px;}
 .main-career-link-list li {font-size: $font-mid;line-height: 1;}
 .main-career-link-list li a {display: block;}
 .main-career-link-list li a:hover {opacity: 0.5;}
 .main-career-link-list li a svg {display: block;}
+
+.main-career-skill-list {display: flex;flex-wrap: wrap;align-items: center;gap: 4px;margin-top: 50px;}
+.main-career-skill-list li {@include font-small;padding: 0 6px;border-radius: $radius1;background: $primary;color: $white;}
 
 .main-foot {padding: $main-table-gutter 0;text-align: center;}
 .main-foot p {@include font-small;}

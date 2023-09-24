@@ -31,6 +31,6 @@
 @mixin scrollbar-style($size: 4) {
   &::-webkit-scrollbar {width: calc(#{$size} * 1px);height: calc(#{$size} * 1px);}
   &::-webkit-scrollbar-track {background: transparent;}
-  &::-webkit-scrollbar-thumb {border-radius: 5em;background: $grey300;}
-  &::-webkit-scrollbar-thumb:hover {background: $grey400;}
+  &::-webkit-scrollbar-thumb {border-radius: 5em;background: $grey400;}
+  &::-webkit-scrollbar-thumb:hover {background: $grey500;}
 }

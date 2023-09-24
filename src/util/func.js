@@ -15,30 +15,36 @@ export const changeDateNotation = (date, notation) => {
   return newDate;
 };
 
-// export const getPeriod = (startDate, endDate) => {
-//   let period = '';
-//   const date1 = new Date(changeDateNotation(startDate, '-'));
-//   const date2 = endDate === null ? new Date() : new Date(changeDateNotation(endDate, '-'));
-  
-//   const diffDate = date1.getTime() - date2.getTime();
-//   const diffMonth = Math.floor(Math.abs(diffDate / (1000 * 60 * 60 * 24 * 30)));
-
-//   return period;
-// };
-
-
-const getYearMonthDiff = (startDate, endDate) => {
+export const getYearMonthDiff = (startDate, endDate) => {
   let year = 0;
   let month = 0;
-  
-  const date1 = new Date(startDate);
-  const date2 = endDate === null ? new Date() : new Date(endDate);
+
+  const date1 = new Date(changeDateNotation(startDate, '-'));
+  const date2 = endDate === null ? new Date() : new Date(changeDateNotation(endDate, '-'));
   
   const diffDate = date1.getTime() - date2.getTime();
   const diffMonth = Math.floor(Math.abs(diffDate / (1000 * 60 * 60 * 24 * 30))) + 1;
 
 	year = Math.trunc(diffMonth / 12);
-  month = 1; // diffMonth / 12의 나머지
+  month = diffMonth % 12;
 
   return [year, month];
+};
+
+export const getYearMonthDiffStr = (diffArr) => {
+  let diffStr = '';
+  const diffYear = diffArr[0];
+  const diffMonth = diffArr[1];
+
+  if (diffYear === 0) {
+    diffStr = `${diffMonth}개월`;
+  } else if (diffYear !== 0 && diffMonth === 0) {
+    diffStr = `${diffYear}년`;
+  } else if (diffYear !== 0 && diffMonth !== 0) {
+    diffStr = `${diffYear}년 ${diffMonth}개월`;
+  } else {
+    return console.error('getYearMonthDiffStr: Check argument!')
+  }
+
+  return diffStr;
 };
