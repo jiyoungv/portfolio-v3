@@ -2,7 +2,7 @@ import parse from 'html-react-parser';
 import AppLayout from 'component/AppLayout';
 import MainCareerTable from 'component/MainCareerTable';
 import { profileInfoList } from 'util/data';
-// import temp_img from 'asset/image/temp_img.png';
+import temp_img from 'asset/image/temp_img.png';
 
 const App = () => {
   return (
@@ -47,7 +47,23 @@ const App = () => {
               <div className="table-col">
                 <article className="main-career-collect">
                   <figure>
-                    TODO: 코딩 사진 or 했던 프로젝트, 클라이언트 로고(바둑판)
+                    <img src={temp_img} alt="" />
+                  </figure>
+                </article>
+              </div>
+            </div>
+            <div className="table-row">
+              <div className="table-col">
+                <article className="main-career-point">
+                  <h2>경력 5년 이상. 프로젝트 40개 이상의 경험.</h2>
+                </article>
+              </div>
+            </div>
+            <div className="table-row">
+              <div className="table-col">
+                <article className="main-career-collect">
+                  <figure>
+                    <img src={temp_img} alt="" />
                   </figure>
                 </article>
               </div>

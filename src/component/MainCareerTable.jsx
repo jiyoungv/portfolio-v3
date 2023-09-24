@@ -69,11 +69,13 @@ const MainCareerTable = () => {
                 </div>
                 <div className="table-col-4">
                   <article className="main-career-body-left main-career-period">
-                    <p>
-                      {changeDateNotation(v.startDate, '.')}~<br/>
-                      {changeDateNotation(v.endDate, '.')}
-                      <small>(약 {getYearMonthDiffStr(getYearMonthDiff(v.startDate, v.endDate))})</small>
-                    </p>
+                    {(v.startDate || v.endtDate) && (
+                      <p>
+                        {changeDateNotation(v.startDate, '.')}~<br/>
+                        {changeDateNotation(v.endDate, '.')}
+                        <small>(약 {getYearMonthDiffStr(getYearMonthDiff(v.startDate, v.endDate))})</small>
+                      </p>
+                    )}
                   </article>
                 </div>
                 <div className="table-col-12">
@@ -93,40 +95,42 @@ const MainCareerTable = () => {
               {v.projects.map((v2, i2) => (
                 <div key={i2} className="table-row depth2">
                   <div className="table-col-8">
-                    <article className="main-career-projects-info">
-                      {v2.devices && (
-                        <ul className="main-career-device-list">
-                          {v2.devices.map((v3, i3) => (
-                            <li key={i3}>{v3}</li>
-                          ))}
-                        </ul>
-                      )}
-                      <p className="main-career-name">{v2.name}</p>
-                      {v2.link && (
-                        <ul className="main-career-link-list">
-                          {v2.link.prod && (
-                            <li>
-                              <a href={v2.link.prod} target="_blank" rel="noreferrer">
-                                <RiLink />
-                              </a>
-                            </li>
-                          )}
-                          {v2.link.test && (
-                            <li>
-                              <a href={v2.link.test} target="_blank" rel="noreferrer">
-                                <RiFlaskFill />
-                              </a>
-                            </li>
-                          )}
-                          {v2.link.git && (
-                            <li>
-                              <a href={v2.link.git} target="_blank" rel="noreferrer">
-                                <RiGithubFill />
-                              </a>
-                            </li>
-                          )}
-                        </ul>
-                      )}
+                    <article className="main-career-project-info">
+                      <div className="main-career-project-info-top">
+                        {v2.devices && (
+                          <ul className="main-career-device-list">
+                            {v2.devices.map((v3, i3) => (
+                              <li key={i3}>{v3}</li>
+                            ))}
+                          </ul>
+                        )}
+                        <p className="main-career-name">{v2.name}</p>
+                        {v2.link && (
+                          <ul className="main-career-link-list">
+                            {v2.link.prod && (
+                              <li>
+                                <a href={v2.link.prod} target="_blank" rel="noreferrer">
+                                  <RiLink />
+                                </a>
+                              </li>
+                            )}
+                            {v2.link.test && (
+                              <li>
+                                <a href={v2.link.test} target="_blank" rel="noreferrer">
+                                  <RiFlaskFill />
+                                </a>
+                              </li>
+                            )}
+                            {v2.link.git && (
+                              <li>
+                                <a href={v2.link.git} target="_blank" rel="noreferrer">
+                                  <RiGithubFill />
+                                </a>
+                              </li>
+                            )}
+                          </ul>
+                        )}
+                      </div>
                       {v2.skills && (
                         <ul className="main-career-skill-list">
                           {v2.skills.map((v3, i3) => (
@@ -138,11 +142,13 @@ const MainCareerTable = () => {
                   </div>
                   <div className="table-col-4">
                     <article className="main-career-period">
-                      <p>
-                        {changeDateNotation(v2.startDate, '.')}~<br/>
-                        {changeDateNotation(v2.endDate, '.')} 
-                        <small>(약 {getYearMonthDiffStr(getYearMonthDiff(v2.startDate, v2.endDate))})</small>
-                      </p>
+                      {(v2.startDate || v2.endtDate) && (
+                        <p>
+                          {changeDateNotation(v2.startDate, '.')}~<br/>
+                          {changeDateNotation(v2.endDate, '.')} 
+                          {/* <small>(약 {getYearMonthDiffStr(getYearMonthDiff(v2.startDate, v2.endDate))})</small> */}
+                        </p>
+                      )}
                     </article>
                   </div>
                   <div className="table-col-12">

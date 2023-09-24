@@ -48,7 +48,10 @@
 .main-profile-info dd a {text-decoration: underline;}
 .main-profile-info dd a:hover {text-decoration: none;}
 
-.main-career-collect {}
+.main-career-collect figure img {width: 100%;height: 200px;}
+
+.main-career-point {padding: $main-table-gutter;text-align: center;}
+.main-career-point h2 {@include h2;color: $primary;font-weight: $font-bold;}
 
 .main-career-head {z-index: 10;position: sticky;top: 0;left: 0;background: $white;}
 .main-career-head-col {padding: $main-table-gutter;text-align: center;}
@@ -72,6 +75,8 @@
 .main-career-company-link:hover {opacity: 0.5;}
 .main-career-company-link svg {display: block;}
 
+.main-career-project-info-top {margin-bottom: 50px;}
+
 .main-career-device-list {display: flex;align-items: center;}
 .main-career-device-list li {@include font-small;}
 .main-career-device-list li:not(:last-child)::after {content: '';display: inline-block;vertical-align: middle;width: 2px;height: 2px;margin: 0 4px;border-radius: 50%;background: $primary;}
@@ -82,7 +87,7 @@
 .main-career-link-list li a:hover {opacity: 0.5;}
 .main-career-link-list li a svg {display: block;}
 
-.main-career-skill-list {display: flex;flex-wrap: wrap;align-items: center;gap: 4px;margin-top: 50px;}
+.main-career-skill-list {display: flex;flex-wrap: wrap;align-items: center;gap: 4px;}
 .main-career-skill-list li {@include font-small;padding: 0 6px;border-radius: $radius1;background: $primary;color: $white;}
 
 .main-foot {padding: $main-table-gutter 0;text-align: center;}
