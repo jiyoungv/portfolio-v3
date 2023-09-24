@@ -1,45 +1,83 @@
 @charset "utf-8";
 
-.main-table {}
-.main-table .table-row {display: flex;align-items: stretch;border: 1px solid $black;border-bottom: 0;}
-.main-table .table-row:last-child {border-bottom: 1px solid $black;}
+.main-table .table-row {display: flex;align-items: stretch;border: 1px solid $main-table-border-color;border-bottom: 0;}
+.main-table .table-row:last-child {border-bottom: 1px solid $main-table-border-color;}
 .main-table .table-row.height-full {height: 100%;}
 .main-table .table-row.depth2 {border-left: 0;border-right: 0;}
 .main-table .table-row.depth2:first-child {border-top: 0;}
 .main-table .table-row.depth2:last-child {border-bottom: 0;}
 .main-table .table-col {width: 100%;}
-.main-table [class^="table-col"]:not(:last-child) {border-right: 1px solid $black;}
+.main-table [class^="table-col"] {flex: 0 0 auto;}
+.main-table [class^="table-col"]:not(:last-child) {border-right: 1px solid $main-table-border-color;}
+.main-table [class^="table-col"] article {width: 100%;height: 100%;}
 @for $i from 1 to 24 {
   .main-table .table-col-#{$i} {width: calc(100% / (24 / $i));}
 }
 
-.main-head {padding: 10px 0;text-align: center;}
-.main-head h6 {@include h6;letter-spacing: 4px;text-transform: uppercase;}
+.main-head {padding: $main-table-gutter 0;text-align: center;}
+.main-head p {@include font-small;color: $main-table-text-color1;font-weight: $font-bold;letter-spacing: 10px;text-transform: uppercase;}
 
-.main-logo {display: flex;justify-content: center;align-items: center;height: 100%;}
-.main-logo h1 {@include h1;}
+.main-logo {display: flex;justify-content: center;align-items: center;}
+.main-logo h1 {color: $main-table-text-color2;font-size: 77px;font-weight: $font-black;animation: main-logo-ani 10s infinite;}
+@keyframes main-logo-ani {
+  0% {color: $primary;}
+  10% {color: orangered;}
+  20% {color: Chartreuse;}
+  30% {color: blueviolet;}
+  40% {color: CornflowerBlue;}
+  50% {color: plum;}
+  60% {color: IndianRed;}
+  70% {color: Gold;}
+  80% {color: RoyalBlue;}
+  90% {color: BurlyWood;}
+  100% {color: DarkSeaGreen;}
+}
 
-.main-profile-name {}
-.main-profile-name h6 {@include h6;}
+.main-profile-name {display: flex;justify-content: center;align-items: center;text-align: center;}
+.main-profile-name h1 {@include h1;color: $main-table-text-color2;font-weight: $font-black;}
 
+.main-profile-info {padding: $main-table-gutter calc($main-table-gutter * 2);}
 .main-profile-info dl {display: flex;align-items: center;}
 .main-profile-info dl:not(:last-child) {margin-bottom: 4px;}
 .main-profile-info dt {width: 100px;font-weight: $font-bold;text-transform: uppercase;}
-.main-profile-info dd a:hover {text-decoration: underline;}
+.main-profile-info dd {color: $main-table-text-color2;}
+.main-profile-info dd a {text-decoration: underline;}
+.main-profile-info dd a:hover {text-decoration: none;}
 
 .main-career-collect {}
 
 .main-career-head {z-index: 10;position: sticky;top: 0;left: 0;background: $white;}
+.main-career-head-col {padding: $main-table-gutter;}
+.main-career-head-col p {@include font-small;color: $main-table-text-color1;font-weight: $font-bold;text-transform: uppercase;}
 
 .main-career-body {margin-top: -1px;}
 .main-career-body .table-row:last-child {border-bottom: 0;}
+.main-career-body .table-row article {padding: $main-table-gutter;color: $main-table-text-color2;}
 .main-career-body-left {position: sticky;top: 86.2px;left: 0;}
 
-.main-career-title {padding: 10px 0;text-align: center;}
+.main-career-title {padding: $main-table-gutter 0;text-align: center;}
+.main-career-title p {@include font-small;color: $main-table-text-color1;font-weight: $font-bold;letter-spacing: 10px;text-transform: uppercase;}
 
-.main-career-company-name {}
+.main-career-company-info {}
+
+.main-career-name {@include font-mid;font-weight: $font-bold;}
+
+.main-career-company-link {display: block;margin-top: 5px;font-size: $font-mid;line-height: 1;}
+.main-career-company-link:hover {opacity: 0.5;}
+.main-career-company-link svg {display: block;}
 
 .main-career-period {}
+.main-career-period p {}
+.main-career-period p small {@include font-small;display: block;}
 
-.main-foot {padding: 10px 0;text-align: center;}
+.main-career-device-list {display: flex;align-items: center;gap: 4px;margin-bottom: 5px;}
+.main-career-device-list li {@include font-small;padding: 0 6px;border-radius: $radius1;background: $main-table-text-color2;color: $white;}
+
+.main-career-link-list {display: flex;align-items: center;gap: 4px;margin-top: 5px;}
+.main-career-link-list li {font-size: $font-mid;line-height: 1;}
+.main-career-link-list li a {display: block;}
+.main-career-link-list li a:hover {opacity: 0.5;}
+.main-career-link-list li a svg {display: block;}
+
+.main-foot {padding: $main-table-gutter 0;text-align: center;}
 .main-foot p {@include font-small;}

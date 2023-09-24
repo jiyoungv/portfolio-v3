@@ -13,7 +13,7 @@ export const profileInfoList = [
   },
   {
     title: `linkedin`,
-    text: `https://www.linkedin.com/in/jyp-dev/`,
+    text: `<a href="https://www.linkedin.com/in/jyp-dev/" target="_blank" rel="noreferrer">https://www.linkedin.com/in/jyp-dev/</a>`,
   },
   {
     title: `skill`,
@@ -27,8 +27,9 @@ export const profileInfoList = [
 
 export const careerList = [
   {
-    name: `VAIV Company <br/>(구 다음소프트)`,
-    startDate: 202303,
+    name: `VAIV Company Inc.<br/>(formerly Daumsoft)`,
+    link: `https://www.vaivcompany.kr/`,
+    startDate: 202103,
     endDate: null,
     description: [
       '1', 
@@ -68,9 +69,9 @@ export const careerList = [
     ],
   },
   {
-    name: `joinsM`,
-    startDate: 202303,
-    endDate: 202303,
+    name: `JoinsM`,
+    startDate: 201806,
+    endDate: 202008,
     description: [
       '1111', 
       '21111',
