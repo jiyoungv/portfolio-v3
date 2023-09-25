@@ -22,7 +22,7 @@
 .main-head p {@include font-small;color: $main-table-text-color1;font-weight: $font-bold;letter-spacing: 10px;text-transform: uppercase;}
 
 .main-logo {display: flex;justify-content: center;align-items: center;}
-.main-logo h1 {color: $primary;font-size: 77px;font-weight: $font-black;animation: main-logo-ani 10s infinite;}
+.main-logo h1 {color: $primary;font-size: 77px;font-weight: $font-black;animation: main-logo-ani 17s infinite;}
 @keyframes main-logo-ani {
   0% {color: $primary;}
   10% {color: orangered;}
@@ -48,6 +48,7 @@
 .main-profile-info dd a {text-decoration: underline;}
 .main-profile-info dd a:hover {text-decoration: none;}
 
+.main-career-collect {display: none;}
 .main-career-collect figure img {width: 100%;height: 200px;}
 
 .main-career-point {padding: $main-table-gutter;text-align: center;}

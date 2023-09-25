@@ -55,7 +55,7 @@ const App = () => {
             <div className="table-row">
               <div className="table-col">
                 <article className="main-career-point">
-                  <h2>경력 5년 이상. 프로젝트 40개 이상의 경험.</h2>
+                  <h2>5년 이상의 경력. 50개 이상의 웹사이트 제작 경험.</h2>
                 </article>
               </div>
             </div>
