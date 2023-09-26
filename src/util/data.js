@@ -805,7 +805,7 @@ export const careerList = [
         link: {
           prod: 'https://komsa-webzine.co.kr/page/vol51/index.php?volNum=vol51',
           test: null,
-          git: 'https://github.com/jiyoungv/kyungsungmedia-komsa2210',
+          git: null,
         },
         skills: null,
         startDate: 202209,
@@ -976,7 +976,7 @@ export const careerList = [
         link: {
           prod: 'https://www.khnp.co.kr/webzine/page/vol240/index.html',
           test: null,
-          git: 'https://github.com/jiyoungv/kyungsungmedia-khnp2107',
+          git: null,
         },
         skills: null,
         startDate: 202107,
@@ -1011,7 +1011,7 @@ export const careerList = [
         link: {
           prod: 'https://www.khnp.co.kr/webzine/page/vol239/index.html',
           test: null,
-          git: 'https://github.com/jiyoungv/kyungsungmedia-khnp2106',
+          git: null,
         },
         skills: null,
         startDate: 202106,

@@ -2,7 +2,8 @@ import parse from 'html-react-parser';
 import AppLayout from 'component/AppLayout';
 import MainCareerTable from 'component/MainCareerTable';
 import { profileInfoList } from 'util/data';
-import temp_img from 'asset/image/temp_img.png';
+import collect_img from 'asset/image/collect_img.png';
+import collect_img2 from 'asset/image/collect_img2.png';
 
 const App = () => {
   return (
@@ -47,7 +48,7 @@ const App = () => {
               <div className="table-col">
                 <article className="main-career-collect">
                   <figure>
-                    <img src={temp_img} alt="" />
+                    <img src={collect_img} alt="" />
                   </figure>
                 </article>
               </div>
@@ -63,7 +64,7 @@ const App = () => {
               <div className="table-col">
                 <article className="main-career-collect">
                   <figure>
-                    <img src={temp_img} alt="" />
+                    <img src={collect_img2} alt="" />
                   </figure>
                 </article>
               </div>

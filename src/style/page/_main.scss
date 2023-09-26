@@ -48,10 +48,9 @@
 .main-profile-info dd a {text-decoration: underline;}
 .main-profile-info dd a:hover {text-decoration: none;}
 
-.main-career-collect {display: none;}
-.main-career-collect figure img {width: 100%;height: 200px;}
+.main-career-collect figure img {width: 100%;}
 
-.main-career-point {padding: $main-table-gutter;text-align: center;}
+.main-career-point {padding: 20px $main-table-gutter;text-align: center;}
 .main-career-point h2 {@include h2;color: $primary;font-weight: $font-bold;}
 
 .main-career-head {z-index: 10;position: sticky;top: 0;left: 0;background: $white;}
