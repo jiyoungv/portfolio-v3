@@ -32,8 +32,9 @@ export const careerList = [
     startDate: 202103,
     endDate: null,
     descriptions: [
-      '자사 서비스 구축 및 운영 퍼블리싱',
-      '전사 디자인 · 퍼블리싱을 지원하는 전사지원셀 관리',
+      '자사 및 타사 서비스 구축 퍼블리싱 업무',
+      '자사 서비스 운영 퍼블리싱 업무 - 기능 및 페이지 추가, 코드 개선 등',
+      '전사 차원 디자인 · 퍼블리싱을 지원하는 전사지원셀 총괄 관리 업무',
       '23.03 책임 진급',
       '22.07~ AI사업부문 신기술사업팀 소속',
       '22.12~ AI사업부문 신기술사업팀 전사지원셀장',
@@ -66,6 +67,21 @@ export const careerList = [
         startDate: 202207,
         endDate: null,
         descriptions: null,
+      },
+      {
+        devices: ['PC'],
+        name: 'VAIV Law 구축',
+        link: {
+          prod: 'https://law.vaiv.kr/',
+          test: 'https://jiyoungv.github.io/test/vaiv-law/',
+          git: 'https://github.com/jiyoungv/vaiv-law-pub',
+        },
+        skills: ['SCSS', 'jQuery'],
+        startDate: 202310,
+        endDate: 202310,
+        descriptions: [
+          '디자인, 퍼블리싱 100% 참여',
+        ],
       },
       {
         devices: ['PC'],
