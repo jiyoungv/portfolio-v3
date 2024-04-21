@@ -73,7 +73,7 @@ const App = () => {
             <div className="table-row">
               <div className="table-col">
                 <article className="main-foot">
-                  <p>ⓒ 2023 Ji Young Park</p>
+                  <p>ⓒ 2024 Ji Young Park</p>
                 </article>
               </div>
             </div>

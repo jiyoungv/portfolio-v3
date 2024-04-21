@@ -34,14 +34,32 @@ export const careerList = [
     descriptions: [
       '자사 및 타사 서비스 구축 퍼블리싱 업무',
       '자사 서비스 운영 퍼블리싱 업무 - 기능 및 페이지 추가, 코드 개선 등',
-      '전사 차원 디자인 · 퍼블리싱을 지원하는 전사지원셀 총괄 관리 업무',
+      'UX1그룹 총괄 관리 업무 - 디자인, 퍼블리싱 업무 배분 및 일정 관리 등',
+      '24.01~ AI솔루션부문 애플리케이션팀 UX1그룹 그룹장',
+      '23.07~23.12 AI사업부문 신기술사업팀 전사지원셀 셀장',
+      '23.07~23.12 AI사업부문 신기술사업팀 기술사업그룹 그룹원',
       '23.03 책임 진급',
-      '22.07~ AI사업부문 신기술사업팀 소속',
-      '22.12~ AI사업부문 신기술사업팀 전사지원셀장',
-      '22.12~23.06 AI사업부문 기술전략팀(이전 명칭) BX그룹장',
-      '21.03~22.06 썸트렌드부문 UIUX팀 소속',
+      '22.12~23.06 AI사업부문 기술전략팀 BX그룹 그룹장',
+      '22.07~22.11 경영전략실 기술전략팀 팀원',
+      '21.03~22.06 썸트렌드부문 UIUX팀 팀원',
     ],
     projects: [
+      {
+        devices: ['Responsive'],
+        name: 'VAIV 생활변화관측소 구독 서비스 구축',
+        link: {
+          prod: null,
+          test: null,
+          git: null,
+        },
+        skills: ['React', 'Next.js', 'TypeScript', 'TailwindCSS'],
+        startDate: 202403,
+        endDate: null,
+        descriptions: [
+          '현재 개발 진행 중',
+          '퍼블리싱 100% 참여',
+        ],
+      },
       {
         devices: ['Responsive'],
         name: 'VAIV AI 포털 서비스 운영',
@@ -67,6 +85,22 @@ export const careerList = [
         startDate: 202207,
         endDate: null,
         descriptions: null,
+      },
+      {
+        devices: ['Responsive'],
+        name: 'VAIV 통합 ID 서비스 구축',
+        link: {
+          prod: null,
+          test: null,
+          git: null,
+        },
+        skills: ['React', 'TypeScript', 'SCSS'],
+        startDate: 202402,
+        endDate: 202403,
+        descriptions: [
+          '현재 개발 진행 중',
+          '퍼블리싱 100% 참여',
+        ],
       },
       {
         devices: ['PC'],
